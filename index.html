@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,43 @@
     <link rel="stylesheet" href="./src/assets/base.css">
     <title>Mon portfolio</title>
 </head>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="importmap">
+      { "imports": {
+          "vue":        "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.esm-browser.prod.js",
+          "vue-router": "https://cdnjs.cloudflare.com/ajax/libs/vue-router/4.1.5/vue-router.esm-browser.min.js"
+      } }
+    </script> 
+    <!--<header>
+      <img id="logo" src="./src/assets/images/Logo.jpg" alt="Mon logo">
+    </header>-->
+
+    <main>
+      <!--<h1>Mon portfolio :</h1>
+      <p>Je m'appelle Ivann Rambaud et je suis étudiant developpeur web full stack. Bienvenue sur mon portfolio,
+          vous retrouverez ici quelques-unes de mes créations !
+      </p>-->
+      <div id="app"></div>
+  
+    </main>
+
+    <!--<footer>
+      <p>Lien vers les réseaux :</p>
+      <a href="https://www.facebook.com/ivann.rambaud" target="_blank"><img id="facebook" src="./src/assets/images/facebook.png" title="Mon Facebook" alt="Voici un lien vers mon Facebook"></a>
+      <a href="https://www.linkedin.com/in/ivann-rambaud-864176247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img id="linkedin" src="./src/assets/images/linkedin.png" title="Mon Linkedin" alt="Voici mon lien vers mon linkedin"></a>
+      <a href="https://github.com/Ivann212" target="_blank"><img id="github" src="./src/assets/images/github.png" title="Mon github" alt="Voici le lien vers mon repository github"></a>
+      <div id="date">
+        <p>derniere mise à jour:</p>
+      <time datetime="2023-11-25T17:54+02:00">samedi 25 novembre 2023</time>
+      </div>
+      
+
+    </footer>-->
+    
+    <script type="module" src="./src/main.js">
+     
+    </script>
+    
   </body>
 </html>
