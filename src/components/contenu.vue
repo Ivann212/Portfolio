@@ -1,26 +1,36 @@
+
+
 <template>
-    <div class="container mb-5">
-
-        <h1 class="mb-5">une modale de vue</h1>
+    <div class="container">
         <modale></modale>
-
-
-    </div>
-
+        <button>Voir mes projets</button>
+   
+    </div> 
+   
 </template>
-<script>
-
-    import Modale from './modale.vue'
-
-    export default{
-        name:'contenu',
-        components : {
-            'modale': Modale
-        }
-    }
 
 
+<script setup>
+
+    import modale from './modale.vue'
+   
+    
+
+    
 </script>
 
-<style>
+<style scoped>
+
+    button{
+        color: #f1f1f1;
+        background-color: #8fca44;
+        width: 70px;
+        border-radius: 5px;
+        margin-left: 47%;
+        
+        margin-bottom: 40px;  
+    }
+    
+
+
 </style>

@@ -1,12 +1,14 @@
-<script>
+<script setup>
   import { RouterLink, RouterView } from 'vue-router'
-  import contenue from './components/contenu.vue'
+  import contenu from './components/contenu.vue'
 </script>
 
 <template>
- 
+  <contenu></contenu>
 </template>
 
 <style scoped>
 
 </style>
+
+
