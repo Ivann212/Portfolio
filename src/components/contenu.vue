@@ -1,69 +1,38 @@
 <template>
-    <div class="container my-4">
-
-        <h1 class="mb-5">Mes créations</h1>
-
-        <modale v-bind:revele="revele" v-bind:togglemodale="togglemodale"></modale>
+    
+    <div class="wrapper my-4" >
+       
+        <Projet v-bind:title="titre"  date="29 septembre 2023" 
+        content="Ce projet à été créer en HTML et CSS"/>
         
 
-        <div v-on:click="togglemodale" class="btn"><img id="cv" src="../assets/images/cv.PNG" alt="L'image de mon cv"></div> <br>
+        <Projet v-bind:title="titre2" date="30 septembre 2023" 
+        content="Ce projet à été coder en HTML, CSS et Javascript"/>
+
+        <Projet v-bind:title="titre3" date="22 septembre 2023" 
+        content="Ce Projet est codé en HTML et CSS"/>
+        
 
     </div>
 
+    
+
 </template>
 
-<script>
-import modale from './modale.vue'
-export default {
-    name: 'contenu',
+<script setup>
+import { ref } from 'vue';
+import Projet from './Projet.vue';
 
-    components: {
-        'modale' : modale
-    },
 
-    data(){
-        return{
-            revele: false
-        }
-    },
+const titre = "Le cv"
+const titre2 = "Le commentaire"
+const titre3 = "Carrière"
 
-    methods: {
-        togglemodale: function(){
-            this.revele = !this.revele
-        }
-        
-        
-    },
-}
+
+
+    defineProps([
+    "title"
+    ]) 
+
+    
 </script>
-
-<style scoped>
-    .btn{
-        background-color: #f7d117;
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-left: 40%;
-        margin-bottom: 20px;
-       
-    }
-    .btn:hover{
-        color: #f7d117;
-        background-color: #333;
-    }
-    h1{
-        text-align: center;
-    }
-    #cv {
-        width: 250px;
-        height: 300px;
-    }
-    #commentaire {
-        width: 250px;
-        height: 300px;
-    }
-  
-
-
-
-
-</style>
