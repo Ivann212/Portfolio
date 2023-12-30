@@ -1,90 +1,85 @@
 <template>
-    <div class="blocmodale">
+    <!--Div pour le cv-->
+    <div class="bloc-modale" v-if="revele">
 
-        <div class="overlay"></div>
+        <div class="overlay" v-on:click="togglemodale"></div>
 
-        <div class="modale">
-            <button class="btn-modale">X</button>
-
-            <!--<div class="cv">
-                <img src="../assets/images/cv.PNG" alt="Une photo de mon cv">
-                <p>Voici mon cv fait en HTML et en CSS</p>
-            </div>
-
-            <div class="carriere">
-                <img src="../assets/images/carriere.PNG" alt="Une photo de mon site carriere f1 23">
-                <p>Voici mon projet sur un suivi de saison sur un jeux de formule 1</p>
-            </div>
-
-            <div class="commentaire">
-                <img src="../assets/images/Commentaire.PNG" alt="Voici une image d'un espace commentaire">
-                <p>C'est un projet de dynamiser un espace commentaire en javascript</p>
-            </div>-->
-
-
+        <div class="modale card">
+            <div v-on:click="togglemodale" class="btn-modale btn btn-danger">X</div>
+             
         </div>
 
     </div>
+    
+
+
 </template>
 
-
-
 <script setup>
-    
-    
-    
 
+    const props = defineProps(['revele','togglemodale'])
+    
 </script>
 
 
-
 <style scoped>
-      
-    .blocmodale{
+    .bloc-modale{
         position: fixed;
         top: 0;
         bottom: 0;
-        right: 0;
         left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1;
     }
-    .overlay{
+    .overlay {
         background: rgba(0, 0, 0, 0.5);
+        position: fixed;
         top: 0;
         bottom: 0;
-        right: 0;
         left: 0;
-        z-index: 2;
-        position: fixed;
+        right: 0;
     }
-  
-    
-    .modale{
-        background: #f1f1f1;
-        color: #333;
-        z-index: 3;
-        width: 600px;
-        height: 400px;
-        overflow: hidden;
+    .modale {
+        background-color: #f1f1f1;
+        color:#333;
+        padding: 50px;
         position: fixed;
+        top: 30%;
+      
     }
-    .btn-modale{
-        color: #fff;
-        background-color: red;
-        border-radius: 5px;
-        border: none;
+    h2{
+        text-align: center;
+        text-decoration: underline;
+    }
+    .btn-modale {
         position: absolute;
         top: 10px;
         right: 10px;
-        cursor: pointer;
-        padding: 8px 10px;
+        
 
     }
-    .cv image{
-        width: 50px;
-        height: 20px;
+    img {
+        padding-bottom: 20px;
     }
+    p {
+        padding-bottom: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    a:hover {
+        color: #f7d117;
+        text-decoration: underline;
+    }
+   
+
+
 </style>
