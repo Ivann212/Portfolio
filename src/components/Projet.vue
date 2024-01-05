@@ -35,9 +35,9 @@ defineProps([
 </script>
 
 <style scoped>
-
-.btn{
-        background-color: #f7d117;
+    .btn{
+        background-color: #17C3B2;
+        color: #495159;
         font-size: 1.1em;
         font-weight: bold;
         margin-left: 40%;
@@ -46,8 +46,8 @@ defineProps([
        
     }
     .btn:hover{
-        color: #f7d117;
-        background-color: #333;
+        color: #17C3B2;
+        background-color: #495159;
     }
 
 

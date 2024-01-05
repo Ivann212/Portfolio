@@ -39,7 +39,7 @@
 
 
 <style scoped>
-    .bloc-modale{
+       .bloc-modale{
         position: fixed;
         top: 0;
         bottom: 0;
@@ -50,6 +50,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
     .overlay {
         background: rgba(0, 0, 0, 0.5);
@@ -61,14 +62,16 @@
     }
     
     .modale {
-        background-color: #f1f1f1;
-        color:#333;
+        background-color: #FEF9EF;
         padding: 50px;
         position: fixed;
         top: 30%;
         height: 50%;
         width: 50%;
         overflow-y: auto;
+        display: flex;    
+        align-items: center;
+        color: #495159;
 
     }
     .btn-modale {
@@ -76,6 +79,7 @@
         top: 10px;
         right: 10px;
     }
+
 
 
 </style>

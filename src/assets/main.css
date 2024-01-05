@@ -3,24 +3,18 @@
 main{
   padding-left: 50px;
   padding-right: 50px;
+  background-color: #FEF9EF;
+  color:#495159 ;
 }
 header{
+  background-color: #FE6D73;
   display: flex;
-  width: 300px;
-  height: 120px;
   justify-content: center;
-  margin-left:auto;
-  margin-right: auto;
-  padding-bottom: 20px;
-  position: fixed;
-  
+  align-items: center;
 }
 #logo{
-  width:auto;
   height: 150px;
-  margin-top: 10px;
-  box-shadow: 0px 0px 20px #f7d117;
-  
+  margin: 20px; 
 }
 .titre{
   text-align: center;
@@ -29,7 +23,8 @@ header{
 }
 
 footer{
-  background-color: #f7d117;
+  background-color: #FE6D73;
+  color: #495159;
   bottom: 0;
   right: 0;
   left: 0;
