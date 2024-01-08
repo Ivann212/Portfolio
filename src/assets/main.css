@@ -1,8 +1,7 @@
 @import './base.css';
 
 main{
-  padding-left: 50px;
-  padding-right: 50px;
+ 
   background-color: #FEF9EF;
   color:#495159 ;
 }
@@ -20,6 +19,11 @@ header{
   text-align: center;
   padding-bottom: 20px;
   padding-top: 60px;
+}
+.haut {
+  display: flex;
+  width: 70px;
+
 }
 
 footer{

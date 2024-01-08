@@ -4,13 +4,8 @@
         
         
     <Modale v-if="revele" v-on:close-modale="closeModale"
-     v-bind:title="title" v-bind:date="date" v-bind:content="content"/>
+     v-bind:title="title" v-bind:date="date" v-bind:content="content" v-bind:github="github"/>
      
-
-    
-   
-
-
 </template>
 
 
@@ -21,7 +16,8 @@ import { ref } from 'vue'
 defineProps([
         "title",
         "date",
-        "content"
+        "content",
+        "github"
     ])
     let revele = ref(false);
 

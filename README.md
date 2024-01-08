@@ -27,7 +27,14 @@ npm run dev
 ```sh
 npm run build
 ```
+### Ouvrir la console
+
+```sh
+Ouvrir Vscode et cliquer sur open folder, séléctioner le dossier du projet.
+Cliquez sur Terminal en haut à gauche puis sur New terminal
+```
 ### Lancer le projet
+
 ```sh
 npm run dev
 copier le lien http que la console va rendre et collez le dans la barre de recherche Google
@@ -35,6 +42,7 @@ copier le lien http que la console va rendre et collez le dans la barre de reche
 
 
 ### élément requis au bon fonctionnement du site 
+
 ```sh
 -Node.js
 -Vue.js
@@ -42,6 +50,7 @@ copier le lien http que la console va rendre et collez le dans la barre de reche
 -bootstrap
 ```
 ### Installation des éléments précédents
+
 ```sh
 -Node.js
 "https://nodejs.org/en/download"
@@ -50,11 +59,11 @@ copier le lien http que la console va rendre et collez le dans la barre de reche
 -bootstrap
 JQuery et popper.js nécessaire
 
-JQuery: "npm install jquery"
+JQuery: "npm install jquery" dans la console
 
-popper.js: "npm install popper.js"
+popper.js: "npm install popper.js" dans la console
 
-bootstrap: "npm install bootstrap"
+bootstrap: "npm install bootstrap" dans la console
 
 -Bien vérifier qu'ils soient présent dans le fichier package-lock.son et package.json
 

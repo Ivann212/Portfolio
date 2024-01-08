@@ -11,6 +11,10 @@
             <h2>{{ title }}</h2>
             <p>{{ date }}</p>
             <p>{{ content }}</p>
+            <p>{{ github }}</p>
+            <img :src="image" alt="essai1" class="modale-image">
+            <img v-bind:title="titre1" src="../assets/images/cv.PNG" alt="essai2">
+            
           
             
               
@@ -27,7 +31,9 @@
     defineProps([
         "title",
         "date",
-        "content"
+        "content",
+        "github",
+        "image"
     ])
 
     defineEmits([
