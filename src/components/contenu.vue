@@ -1,40 +1,69 @@
 <template>
+
+  <header>
+    <img id="logo" src="../assets/images/Logo.jpg" alt="Mon logo">
+  </header>
+
+  <main> 
+    <h1 class="titre">Voici mon portfolio !</h1>
+    <p>Je m'appelle Ivann Rambaud et je suis étudiant developpeur web full stack. Bienvenue sur mon portfolio, vous retrouverez ici quelques-unes de mes créations !</p>
     
     <div class="wrapper my-4" >
        
-        <Projet v-bind:title="titre"  date="29 septembre 2023" 
-        content="Ce projet à été créer en HTML et CSS" github="https://github.com/Ivann212/Mon-CV" v-bind:imageCV="imageCV"/>
+      <Projet v-bind:title="titre"  date="29 septembre 2023" 
+      content="Ce projet à été créer en HTML et CSS" github="https://github.com/Ivann212/Mon-CV" v-bind:imageCv="imageCv"/>
         
 
-        <Projet v-bind:title="titre2" date="30 septembre 2023" 
-        content="Ce projet à été coder en HTML, CSS et Javascript" github="https://github.com/Ivann212/com"/>
+      <Projet v-bind:title="titre2" date="30 septembre 2023" 
+      content="Ce projet à été coder en HTML, CSS et Javascript" github="https://github.com/Ivann212/com" v-bind:imageCommentaire="imageCommentaire"/>
 
-        <Projet v-bind:title="titre3" date="22 septembre 2023" 
-        content="Ce Projet est codé en HTML et CSS" github="https://github.com/Ivann212/Carriere"/>
+      <Projet v-bind:title="titre3" date="22 septembre 2023" 
+      content="Ce Projet est codé en HTML et CSS" github="https://github.com/Ivann212/Carriere" v-bind:imageCarriere="imageCarriere"/>
+      
         
 
     </div>
+    <a href="#logo" class="haut"> <img src="../assets/images/fleche.png" alt="fleche"></a>
     
-    <form method="post">
-  <ul>
-    <li>
-      <label for="name">Nom&nbsp;:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">E-mail&nbsp;:</label>
-      <input type="email" id="mail" name="user_mail" />
-    </li>
-    <li>
-      <label for="msg">Message&nbsp;:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
-  </ul>
+    <form method="post" action="traitement.php">
+      <ul>
+        <li>
+          <label for="name">Nom&nbsp;:</label>
+          <input type="text" id="name" name="user_name" />
+        </li>
+        <li>
+          <label for="mail">E-mail&nbsp;:</label>
+          <input type="email" id="mail" name="user_mail" />
+        </li>
+        <li>
+          <label for="msg">Message&nbsp;:</label>
+          <textarea id="msg" name="user_message"></textarea>
+        </li>
+      </ul>
 
-    <div class="button">
-     <button type="submit" href= test.email@gmail.com>Envoyer le message</button>
+      <div class="button">
+        <button type="submit">Envoyer le message</button>
+      </div>
+    </form>
+
+   
+  </main>
+  <footer>
+    <p>Lien vers les réseaux :</p>
+
+    <div id="reseaux">
+      <a href="https://www.facebook.com/ivann.rambaud" target="_blank"><img id="facebook" src="../assets/images/facebook.png" title="Mon Facebook" alt="Voici un lien vers mon Facebook"></a>
+      <a href="https://www.linkedin.com/in/ivann-rambaud-864176247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img id="linkedin" src="../assets/images/linkedin.png" title="Mon Linkedin" alt="Voici mon lien vers mon linkedin"></a>
+      <a href="https://github.com/Ivann212" target="_blank"><img id="github" src="../assets/images/github.png" title="Mon github" alt="Voici le lien vers mon repository github"></a>
     </div>
-</form>
+
+    <div id="date">
+      <p>derniere mise à jour: </p> 
+      <time datetime="2023-11-25T17:54+02:00"> mardi 9 janvier 2024</time>
+    </div>
+
+
+  </footer>
    
 
     
@@ -49,12 +78,21 @@ import Projet from './Projet.vue';
 const titre = "Le cv"
 const titre2 = "Le commentaire"
 const titre3 = "Carrière"
-const imageCV = ref("../assets/images/cv.PNG")
+const imageCv = ref("../../public/cv.PNG")
+const imageCarriere = ref("../../public/carriere.PNG")
+const imageCommentaire = ref("../../public/Commentaire.PNG")
+
 
 
 
     defineProps([
-    "title"
+      "title",
+      "date",
+      "content",
+      "github",
+      "imageCv",
+      "imageCarriere",
+      "imageCommentaire"
     ]) 
 
     

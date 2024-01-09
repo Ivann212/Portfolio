@@ -12,13 +12,11 @@
             <p>{{ date }}</p>
             <p>{{ content }}</p>
             <p>{{ github }}</p>
-            <img :src="image" alt="essai1" class="modale-image">
-            <img v-bind:title="titre1" src="../assets/images/cv.PNG" alt="essai2">
+            <img class="cv" :src="imageCv" alt="image cv">
+            <img class="commentaire" :src="imageCommentaire" alt="image commentaire">
+            <img class="carriere" :src="imageCarriere" alt="image carriere">
             
-          
-            
-              
-                
+                 
         </div>
         
         
@@ -28,12 +26,15 @@
 
 <script setup>
 
+
     defineProps([
         "title",
         "date",
         "content",
         "github",
-        "image"
+        "imageCv",
+        "imageCarriere",
+        "imageCommentaire"
     ])
 
     defineEmits([
@@ -84,6 +85,18 @@
         position: absolute;
         top: 10px;
         right: 10px;
+    }
+    .commentaire {
+        width: 600px;
+        height: 600px;
+    }
+    .carriere {
+        width: 600px;
+        height: 600px;
+    }
+    .cv {
+        height: 600px;
+        width: 500px;
     }
 
 

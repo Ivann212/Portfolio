@@ -5,6 +5,7 @@
 
 <template>
   <contenu></contenu>
+  <RouterView />
 </template>
 
 <style scoped>

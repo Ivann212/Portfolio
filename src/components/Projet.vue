@@ -4,7 +4,8 @@
         
         
     <Modale v-if="revele" v-on:close-modale="closeModale"
-     v-bind:title="title" v-bind:date="date" v-bind:content="content" v-bind:github="github"/>
+     v-bind:title="title" v-bind:date="date" v-bind:content="content" 
+     v-bind:github="github" v-bind:image-cv="imageCv" v-bind:imageCommentaire="imageCommentaire" v-bind:imageCarriere="imageCarriere"/>
      
 </template>
 
@@ -14,10 +15,13 @@ import Modale from './modale.vue';
 import { ref } from 'vue'
 
 defineProps([
-        "title",
-        "date",
-        "content",
-        "github"
+    "title",
+    "date",
+    "content",
+    "github",
+    "imageCv",
+    "imageCarriere",
+    "imageCommentaire"
     ])
     let revele = ref(false);
 
