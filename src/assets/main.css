@@ -5,26 +5,13 @@ main{
   background-color: #FEF9EF;
   color:#495159 ;
 }
-header{
-  background-color: #FE6D73;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 #logo{
   height: 150px;
   margin: 20px; 
 }
-.titre{
-  text-align: center;
-  padding-bottom: 20px;
-  padding-top: 60px;
-}
-.haut {
-  display: flex;
-  width: 70px;
 
-}
+
 
 footer{
   background-color: #FE6D73;

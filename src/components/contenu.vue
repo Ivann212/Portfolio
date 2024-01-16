@@ -2,13 +2,26 @@
 
   <header>
     <img id="logo" src="../assets/images/Logo.jpg" alt="Mon logo">
+    <ul id="menu">
+      <li>
+        <a href="#titre">Présentation</a>
+      </li>
+      <li>
+        <a href="#projet">Mes projets</a>
+      </li>
+      <li>
+        <a href="#formulaire">Contact</a>
+      </li>
+    </ul>
   </header>
 
   <main> 
-    <h1 class="titre">Voici mon portfolio !</h1>
-    <p>Je m'appelle Ivann Rambaud et je suis étudiant developpeur web full stack. Bienvenue sur mon portfolio, vous retrouverez ici quelques-unes de mes créations !</p>
+    <h1 id="titre">Voici mon portfolio !</h1>
+    <p>Je m'appelle Ivann Rambaud et je suis étudiant developpeur web full stack au Centre Européen de Formation. J'ai actuellement 18 ans
+      et j'ai découvert  le développement web au lycée.
+       Bienvenue sur mon portfolio, vous retrouverez ici quelques-unes de mes créations !</p>
     
-    <div class="wrapper my-4" >
+    <div id="projet" class="wrapper my-4" >
        
       <Projet v-bind:title="titre"  date="29 septembre 2023" 
       content="Ce projet à été créer en HTML et CSS" github="https://github.com/Ivann212/Mon-CV" v-bind:imageCv="imageCv"/>
@@ -25,7 +38,7 @@
     </div>
     <a href="#logo" class="haut"> <img src="../assets/images/fleche.png" alt="fleche"></a>
     
-    <form method="post" action="traitement.php">
+    <form id="formulaire" method="post" action="../views/NotFound.vue">
       <ul>
         <li>
           <label for="name">Nom&nbsp;:</label>
@@ -64,10 +77,6 @@
 
 
   </footer>
-   
-
-    
-
 </template>
 
 <script setup>
@@ -82,23 +91,26 @@ const imageCv = ref("../../public/cv.PNG")
 const imageCarriere = ref("../../public/carriere.PNG")
 const imageCommentaire = ref("../../public/Commentaire.PNG")
 
-
-
-
-    defineProps([
-      "title",
-      "date",
-      "content",
-      "github",
-      "imageCv",
-      "imageCarriere",
-      "imageCommentaire"
-    ]) 
+defineProps([
+  "title",
+  "date",
+  "content",
+  "github",
+  "imageCv",
+  "imageCarriere",
+  "imageCommentaire"
+]) 
 
     
 </script>
 
 <style scoped>
+
+#titre{
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
 .wrapper {
     padding-top: 30px;
 }
@@ -111,7 +123,7 @@ form {
   border-radius: 1em;
 }
 
-ul {
+form ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -125,6 +137,52 @@ label {
   display: inline-block;
   width: 90px;
   text-align: right;
+}
+header {
+  background-color: #FE6D73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+
+}
+#menu {
+  display: flex;
+  padding:0 ;
+  
+}
+header ul {
+  list-style: none;
+}
+header a {
+  padding-top: 20px ;
+  display: block;
+  min-width: 120px;
+  text-align: center;
+  text-decoration: none;
+  color: #495159;
+  background-color: #17C3B2;
+  border: 2px solid #FE6D73;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+}
+header a:hover {
+  background-color: #FE6D73;
+  border:2px solid #17C3B2;
+}
+header a:active {
+  border-bottom: 3px solid #0088cc;
+}
+.haut {
+  display: flex;
+  width: 30px;
 }
 
 </style>
