@@ -23,15 +23,22 @@
     
     <div id="projet" class="wrapper my-4" >
        
-      <Projet v-bind:title="titre"  date="29 septembre 2023" 
-      content="Ce projet à été créer en HTML et CSS" github="https://github.com/Ivann212/Mon-CV" v-bind:imageCv="imageCv"/>
+      <Projet v-bind:title="titre"  date="9 septembre 2023" 
+      content="Ce projet à été créer en HTML et CSS" github="https://github.com/Ivann212/Mon-CV" 
+      v-bind:image-cv="imageCv"/>
         
 
       <Projet v-bind:title="titre2" date="30 septembre 2023" 
-      content="Ce projet à été coder en HTML, CSS et Javascript" github="https://github.com/Ivann212/com" v-bind:imageCommentaire="imageCommentaire"/>
+      content="Ce projet à été coder en HTML, CSS et Javascript" github="https://github.com/Ivann212/com" 
+      v-bind:image-commentaire="imageCommentaire"/>
 
-      <Projet v-bind:title="titre3" date="22 septembre 2023" 
-      content="Ce Projet est codé en HTML et CSS" github="https://github.com/Ivann212/Carriere" v-bind:imageCarriere="imageCarriere"/>
+      <Projet v-bind:title="titre3" date="17 novembre 2023" 
+      content="Ce Projet est codé en HTML et CSS" github="https://github.com/Ivann212/Carriere"
+      v-bind:image-carriere="imageCarriere" />
+
+      <Projet v-bind:title="titre4" date="2 novembre 2023" 
+      content="Ce projet est un cahier des charges concernant la refonte du site de la socketterie"
+      v-bind:imageCDC="imageCDC"/>
       
         
 
@@ -54,8 +61,8 @@
         </li>
       </ul>
 
-      <div class="button">
-        <button type="submit">Envoyer le message</button>
+      <div>
+        <button class="bouton" type="submit">Envoyer le message</button>
       </div>
     </form>
 
@@ -72,7 +79,7 @@
 
     <div id="date">
       <p>derniere mise à jour: </p> 
-      <time datetime="2023-11-25T17:54+02:00"> mardi 9 janvier 2024</time>
+      <time datetime="2023-11-25T17:54+02:00"> mercredi 17 janvier 2024</time>
     </div>
 
 
@@ -87,18 +94,23 @@ import Projet from './Projet.vue';
 const titre = "Le cv"
 const titre2 = "Le commentaire"
 const titre3 = "Carrière"
-const imageCv = ref("../../public/cv.PNG")
-const imageCarriere = ref("../../public/carriere.PNG")
+const titre4 = "Cahier des charges"
 const imageCommentaire = ref("../../public/Commentaire.PNG")
+const imageCarriere = ref("../../public/carriere.PNG")
+const imageCv = ref("../../public/cv.PNG")
+const imageCDC = ref("../../public/cahier.PNG")
+
+
 
 defineProps([
   "title",
   "date",
   "content",
   "github",
+  "imageCommentaire",
   "imageCv",
   "imageCarriere",
-  "imageCommentaire"
+  "imageCDC"
 ]) 
 
     
@@ -119,7 +131,15 @@ form {
   margin-bottom: 30px;
   width: 400px;
   padding: 1em;
-  border: 2px solid #ccc;
+  border: 5px solid #FE6D73;
+  border-radius: 1em;
+}
+form input {
+  border: 2px solid #FE6D73;
+  border-radius: 1em;
+}
+form textarea {
+  border: 2px solid #FE6D73;
   border-radius: 1em;
 }
 
@@ -137,6 +157,17 @@ label {
   display: inline-block;
   width: 90px;
   text-align: right;
+  color: #495159;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.bouton {
+  background-color: #FE6D73;
+  border: #FE6D73;
+  border-radius: 7px;
+  color: #495159;
+  font-weight: 600;
+  margin-top: 10px;
 }
 header {
   background-color: #FE6D73;
@@ -183,6 +214,13 @@ header a:active {
 .haut {
   display: flex;
   width: 30px;
+}
+footer{
+  background-color: #FE6D73;
+  color: #495159;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 </style>

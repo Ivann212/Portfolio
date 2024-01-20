@@ -12,9 +12,10 @@
             <p>{{ date }}</p>
             <p>{{ content }}</p>
             <p>{{ github }}</p>
-            <img class="cv" :src="imageCv" alt="image cv">
-            <img class="commentaire" :src="imageCommentaire" alt="image commentaire">
-            <img class="carriere" :src="imageCarriere" alt="image carriere">
+            <img class="cv" :src="imageCv" alt="cv">
+            <img class="commentaire" :src="imageCommentaire" alt="espace commentaire ">
+            <img class="carriere" :src="imageCarriere" alt="carriere F1">
+            <img :src="imageCDC" alt="cahier des charges">
             
                  
         </div>
@@ -32,9 +33,13 @@
         "date",
         "content",
         "github",
+        "imageCommentaire",
         "imageCv",
         "imageCarriere",
-        "imageCommentaire"
+        "imageCDC"
+
+
+
     ])
 
     defineEmits([

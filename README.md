@@ -1,46 +1,3 @@
-# vue-project
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-### Ouvrir la console
-
-```sh
-Ouvrir Vscode et cliquer sur open folder, séléctioner le dossier du projet.
-Cliquez sur Terminal en haut à gauche puis sur New terminal
-```
-### Lancer le projet
-
-```sh
-npm run dev
-copier le lien http que la console va rendre et collez le dans la barre de recherche Google
-```
-
-
 ### élément requis au bon fonctionnement du site 
 
 ```sh
@@ -48,12 +5,15 @@ copier le lien http que la console va rendre et collez le dans la barre de reche
 -Vue.js
 -Vscode
 -bootstrap
+-Git
 ```
 ### Installation des éléments précédents
 
 ```sh
 -Node.js
 "https://nodejs.org/en/download"
+-Git
+"https://git-scm.com/downloads"
 -Vscode
 "https://code.visualstudio.com/download"
 -bootstrap
@@ -72,5 +32,24 @@ Ajoutez les lignes suivantes: " import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css' " (pensez à bien prendre les '' lors du copié collé)
 ```
 
+### Télécharger le projet
+```sh
+Tout d'abord, il faudra créer un dossier, puis ouvrez Vscode et cliquer sur open folder, séléctioner le dossier du projet.
+Cliquez sur Terminal en haut à gauche puis sur New terminal,
+se rendre sur la page github du projet, cliquez sur le bouton vert "code", copier le lien https et pour finir, dans le terminal que vous avez ouvert sur vscode, ecrivez "git clone (lien copié)"
+```
+
+### Ouvrir la console
+
+```sh
+Ouvrir Vscode et cliquer sur open folder, séléctioner le dossier du projet.
+Cliquez sur Terminal en haut à gauche puis sur New terminal
+```
+### Lancer le projet
+
+```sh
+npm run dev
+copier le lien http que la console va rendre et collez le dans la barre de recherche Google
+```
 
 
